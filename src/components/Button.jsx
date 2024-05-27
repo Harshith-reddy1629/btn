@@ -1,21 +1,23 @@
 import React from "react";
-import colorsList from "../constant.json";
+import colorsList from "../app/constant.json";
 import { FaArrowRight } from "react-icons/fa";
 
-const Button = ({
+function Button({
   id,
   text = "Button",
   Icon = FaArrowRight,
   height = 55,
   width = 180,
-  background = "#141414",
-}) => {
+}) {
   return (
     <>
-      <div className="w-72 h-44 flex justify-center items-center bg-[#f4f4f4]">
+      <div className="w-72 h-44 flex justify-center items-center bg-[#f4f4f4ff]">
         <button className="p-0.5 overflow-hidden inline shadow-2xl shadow-[#3a2744] hover:shadow-[#4b2774] rounded-[18px]  group hover:animate-animationOnHover animate-animationOnLeave bg-btn-gradient-rotation">
           <span
-            style={{ "--height": height + "px", "--width": width + "px" }}
+            style={{
+              "--height": height + "px",
+              "--width": width + "px",
+            }}
             className="overflow-hidden skew-x-2 group-hover:skew-x-0 text-black relative rounded-[16px] w-[var(--width)] h-[var(--height)] grid grid-cols-[repeat(100,1%)] grid-rows-[repeat(2,50%)] bg-[#d9d9d9] "
           >
             {colorsList.map((k, i) => (
@@ -35,7 +37,7 @@ const Button = ({
                   "--span-background": k + "50",
                 }}
                 key={k}
-                className="w-full z-10 h-full  hover:bg-[var(--span-background)] hover:shadow-btnSpanShadow"
+                className="w-full z-10 h-full   hover:bg-[var(--span-background)] hover:shadow-btnSpanShadow"
               ></span>
             ))}
 
@@ -49,6 +51,6 @@ const Button = ({
       </div>
     </>
   );
-};
+}
 
 export default Button;

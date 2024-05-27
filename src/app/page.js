@@ -1,6 +1,6 @@
 import "./globals.css";
 import colorsList from "./constant.json";
-import Button from "./components/Button";
+import Button from "../components/Button";
 import { FaArrowRight } from "react-icons/fa";
 
 function Home({
@@ -18,7 +18,7 @@ function Home({
             "--height": height + "px",
             "--width": width + "px",
           }}
-          className="!bg-[#141414] overflow-hidden text-white relative rounded-[16px] w-[var(--width)] h-[var(--height)] grid grid-cols-[repeat(100,1%)] grid-rows-[repeat(2,50%)] "
+          className="bg-[#141414] overflow-hidden text-white relative rounded-[16px] w-[var(--width)] h-[var(--height)] grid grid-cols-[repeat(100,1%)] grid-rows-[repeat(2,50%)] "
         >
           {colorsList.map((k, i) => (
             <span
