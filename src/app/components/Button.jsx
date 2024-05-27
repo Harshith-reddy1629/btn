@@ -12,8 +12,8 @@ const Button = ({
 }) => {
   return (
     <>
-      <div className="p-0.5 overflow-hidden inline shadow-2xl shadow-[#3a2744] hover:shadow-[#4b2774] rounded-[18px]  group hover:animate-animationOnHover animate-animationOnLeave bg-btn-gradient-rotation">
-        <button
+      <button className="p-0.5 overflow-hidden inline shadow-2xl shadow-[#3a2744] hover:shadow-[#4b2774] rounded-[18px]  group hover:animate-animationOnHover animate-animationOnLeave bg-btn-gradient-rotation">
+        <span
           style={{
             "--height": height + "px",
             "--width": width + "px",
@@ -47,8 +47,8 @@ const Button = ({
             {text}
             <Icon className="group-hover:translate-x-1.5 text-sm transition duration-500 " />
           </span>
-        </button>
-      </div>
+        </span>
+      </button>
     </>
   );
 };
