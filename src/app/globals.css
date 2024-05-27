@@ -16,6 +16,12 @@
   }
 }
 
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 45deg;
+  inherits: false;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
